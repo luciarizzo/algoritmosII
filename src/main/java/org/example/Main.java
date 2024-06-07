@@ -6,8 +6,14 @@ import AlgoritmosOrdenamiento.Burbuja;
 import AlgoritmosOrdenamiento.Casilleros;
 import AlgoritmosOrdenamiento.Cuentas;
 import AlgoritmosOrdenamiento.Insercion;
+import TDA.DynamicQueu;
+import TDA.IQueu;
+import TDA.IStack;
+import TDA.PilaDinamica;
 
 import java.util.Arrays;
+import java.util.Queue;
+import java.util.Stack;
 
 import static AlgoritmosOrdenamiento.Insercion.sort;
 
@@ -57,7 +63,27 @@ public class Main {
         Cuentas.countingSort(array);
         System.out.println("Arreglo ordenado x countingSort: " + Arrays.toString(array));
         */
+        /*
+        ------OPERACIONES PILAS: ESTRUCTURA DESTRUCTIVA.
+         */
+       /* PilaDinamica stack = new PilaDinamica();
+        stack.add(1);
+        stack.add(23);
+        stack.add(94);
 
+        while(!stack.isEmpty()){
+            System.out.println(stack.getTop());
+            stack.remove(); // sin esto es un loop infinito imprimiendo 94 porque obvio es el tope y la condicion nunca corta.
+        }
+        */
+
+        //ESTRATEGIA PARA RESOLVER ESTO: TRABAJAR CON COPIAS. PILAS SON ESTRUCTURA DE TIPO LIFO
+
+        DynamicQueu queu = new DynamicQueu(8);
+        queu.add(1);
+        queu.add(23);
+        queu.add(94);
+        System.out.println(queu.print(queu));
 
     }
 
