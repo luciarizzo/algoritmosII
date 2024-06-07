@@ -3,6 +3,8 @@ package org.example;
 import AlgoritmosBusqueda.MinimoMaximo;
 import AlgoritmosBusqueda.Secuencial;
 import AlgoritmosOrdenamiento.Burbuja;
+import AlgoritmosOrdenamiento.Casilleros;
+import AlgoritmosOrdenamiento.Cuentas;
 import AlgoritmosOrdenamiento.Insercion;
 
 import java.util.Arrays;
@@ -16,7 +18,7 @@ public class Main {
         /*
         ARRAYS - BUSQUEDA
          */
-        int[] array = {1,2,67,24,9};
+        int[] array = {1,2,67,24,9, 89, 34, 12, 18, -1, -6};
         /* MINIMO Y MAXIMO
         int minimo = MinimoMaximo.findMin(array);
         int maximo = MinimoMaximo.findMax(array);
@@ -45,5 +47,18 @@ public class Main {
         System.out.println("Arreglo ordenado: " + Arrays.toString(array));
          */
 
+        /*
+        ---- ORDENAMIENTO CASILLEROS
+        Casilleros.BucketSort(array);
+        System.out.println("Arreglo ordenado x bucket sort: " + Arrays.toString(array));
+        */
+        /*
+        ----- CUENTAS
+        Cuentas.countingSort(array);
+        System.out.println("Arreglo ordenado x countingSort: " + Arrays.toString(array));
+        */
+
+
     }
+
 }
